@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practice</title>
+
+    <!--Bootstrap CSS Link-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Custom CSS File Link-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+
+<button onclick="ExecPostRequest()">Exec Post Request</button>
+
+
+
+
+
+
+  <script>
+
+    // Multiplication table from 1 to 10
+for (let i = 1; i <= 10; i++) {
+  document.write(`Multiplication table for ${i}:`);
+  for (let j = 1; j <= 10; j++) {
+    document.write("<br>"+`${i} * ${j} = ${i * j}`);
+  }
+  document.write("<br>"); // Add a blank line between tables for better readability
+}
+
+// Multiplication table from 1 to 10
+for (let i = 1; i <= 10; i++) {
+  console.log(`Multiplication table for ${i}:`);
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
+  console.log(); // Add a blank line between tables for better readability
+}
+
+
+
+   /*
+    var x = 10;
+    var y = 20;
+    var z = x + y;
+    document.write(z);
+
+    //Line Break
+    document.write("<br><br>");
+    
+
+    // Object
+    
+    var person={
+      Name: "Rabbil",
+      Age: 30,
+      City: "Dhaka"
+    }
+    document.write(person.Name);
+    document.write("<br><br>");
+   
+
+
+    // Array
+     var A = ["Dhaka", "Rangpur", "Rajshahi,"]
+
+
+    // If Else Statement
+    
+    var age = 14;
+    if(age>= 18){
+      document.write("You are adult");
+    }
+    else{
+      document.write("You are not adult");
+    }
+
+    //Line Break
+    document.write("<br><br>");
+
+
+
+    // Switch Case
+    
+    var Marks = 14;
+
+    switch(true){
+
+      case (Marks <= 100 && Marks >= 80):
+        document.write('A+');
+        break;
+
+      case (Marks <= 80 && Marks >= 70):
+        document.write('A');
+        break;
+
+      case (Marks <= 70 && Marks >= 60):
+        document.write('B');
+        break;
+
+      case (Marks <= 60 && Marks >= 50):
+        document.write('C');
+        break;
+
+      case (Marks <= 50 && Marks >= 40):
+        document.write('D');
+        break;
+
+      default:
+        document.write('F')
+    }
+
+    //Line Break
+    document.write("<br><br>");
+ 
+
+    // For Loop
+   
+    var i;
+    for(i=0; i<10 ; i++){
+      if(i==5 || i==8){
+        continue;
+      }
+      document.write(i + "<button>Submit</button><br>");
+    }
+
+    //Line Break
+    document.write("<br><br>");
+   
+
+    // While Loop
+ 
+    var i=0;
+    while(i<3){
+      document.write(i + "<button>Submit</button><br>");
+      i=i+1;
+    }
+
+    //Line Break
+    document.write("<br><br>");
+   
+
+    // Do While Loop
+    
+    var i=0;
+    do{
+      document.write(i + "<button>Submit</button><br>");
+      i=i+1
+    }while(i<3)
+
+    //Line Break    
+    document.write("<br><br>");
+
+    // Function
+    
+
+    function addTwoNumber(){
+      var num1 = 10;
+      var num2 = 20;
+      var sum = num1 + num2;
+      document.write(sum + "<br>");
+    }
+
+    addTwoNumber();
+    addTwoNumber();
+
+    document.write("<br><br>");
+
+    function addTwoNumber(num1, num2){
+      var sum = num1 + num2;
+      document.write(sum + "<br>");
+    }
+
+    addTwoNumber(5, 10);
+    addTwoNumber(10, 20);
+
+    //Line Break   
+    document.write("<br><br>");
+
+    function addTwoNumber(num1, num2){
+      return num1 + num2;
+    }
+    
+    var newValue = addTwoNumber(20, 30)+10;
+    document.write(newValue);
+   
+
+    // Object
+    var MyPC={
+      Brand: "Lenovo",
+      Ram: "8 GB",
+      Processor: "cor-i5"
+    }
+
+    document.write(MyPC['Brand']);
+    document.write(MyPC.Ram);
+
+    //Line Break
+    document.write("<br><br>");
+
+    //Array
+    var category = [
+      "Allium",
+      "Beverages",
+      "Dairy Bread & Eggs",
+      "Fruits & Vegetables"
+    ]
+    document.write(category[3]);
+
+    var i;
+    /*
+    for(i=0; i<category.length; i=i+1){
+      document.write(category[i]+"<br>");
+    }
+    */
+   // For-in Loop in Array
+
+   /*
+
+   for(var item in category){
+    document.write(category[item]+"<br>");
+   }
+
+   // For-in Loop in Object
+   var person={
+      Name: "Rabbil",
+      Age: 30,
+      City: "Dhaka"
+    }
+    for(var item in person){
+    document.write(person[item]+"<br>");
+   }
+
+   //Line Break    
+    document.write("<br><br>");
+
+
+    // Array Concat
+    var arr1 = ["A","B","C"];
+    var arr2 = ["D","E","F"];
+
+    var arr3 = arr1.concat(arr2);
+    document.write(arr3);
+
+    //Line Break
+    document.write("<br><br>");
+
+    // Array From
+    var Title = "Learn with Rabbil";
+    var titleArray = Array.from(Title);
+
+    document.write(titleArray[11]);
+    
+    //Line Break
+    document.write("<br><br>");
+
+    
+    var numArray = [30, 32, 40, 55, 60, 80, 90];
+    // Array Filter
+    /*
+    var result = numArray.filter(function(item){
+      return item>50;
+    })
+    document.write(result);
+    */
+
+    // Array Find
+    /*
+    var result = numArray.find(function(value){
+      return value<50;
+    })
+    document.write(result);
+
+    //Line Break
+    document.write("<br><br>");
+
+    // Array FindIndex
+    var result = numArray.findIndex(function(value){
+      return value>50;
+    })
+    document.write(result);
+    */
+
+    /*
+
+    // Foreach Loop in Array
+    numArray.forEach(function(item){
+      document.write(item+"<br>")
+    })
+    */
+
+
+    function ExcGetRequest(){
+      var URL = "https://crud.teamrabbil.com/api/v1/ReadProduct";
+      var Configuration={method:"GET"};
+
+      fetch(URL,Configuration)
+      .then(response=>response.json())
+      .then(result=>console.log(result))
+      .catch(err=>console.log(err))
+    }
+    
+
+    function ExecPostRequest(){
+      var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct";
+
+      var BodyData={Img:"123",ProductCode:"123",ProductName:"123",Qty:"123",TotalPrice:"123",UnitPrice:"123"}
+
+      var Config={
+          method:"POST",
+          headers:{'Accept':'application/json','Content-Type':'application/json'},
+          body:JSON.stringify()
+        };
+
+      fetch(URL,Config)
+      .then(response=>response.json())
+      .then(result=>console.log(result))
+      .catch(err=>console.log(err))
+    }
+    
+
+
+
+    //AJAX
+    // https://crud.teamrabbil.com/api/v1/ReadProduct
+
+
+
+
+  </script>
+
+
+    <!--Bootstrap JS Link-->
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- Custom Javascript Link -->
+    <script src="js/script.js"></script>
+</body>
+</html>
